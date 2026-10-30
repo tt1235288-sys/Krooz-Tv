@@ -61,7 +61,7 @@ export const CONSTANTS = {
     email: 'support@krooziptv.us', // ⚠️ Replace with your real support email
     phone: '+1 555 010 0199', // ⚠️ Replace with your real US number
     whatsapp: '+1 555 010 0199', // ⚠️ Replace with your real WhatsApp number
-    whatsappUrl: 'https://live-support.netlify.app', // ⚠️ Replace with your real wa.me link
+    whatsappUrl: 'http://support-tv.online', // ⚠️ Replace with your real wa.me link
     supportHours: '24/7 US Customer Support via Email and Live Chat',
   },
 
