@@ -5,9 +5,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { CONSTANTS } from '@/lib/seo';
-import { ProductSchema, FAQSchema } from './components/PageSchemas';
+import { ProductSchema, FAQSchema } from '../components/PageSchemas';
 import { blogPosts } from '@/lib/blog';
-import USAFlag from './components/USAFlag';
+import USAFlag from '../components/USAFlag';
 import { 
   PlayCircle,
   UserCheck,
@@ -31,13 +31,13 @@ import {
   Smartphone,
   BarChart
 } from 'lucide-react';
-import { FadeIn, FadeInStagger, FadeInItem } from './components/AnimatedSection';
-import AnimatedCounter from './components/AnimatedCounter';
-import TargetCountries from './components/TargetCountries';
-import ShareButtons from './components/ShareButtons';
+import { FadeIn, FadeInStagger, FadeInItem } from '../components/AnimatedSection';
+import AnimatedCounter from '../components/AnimatedCounter';
+import TargetCountries from '../components/TargetCountries';
+import ShareButtons from '../components/ShareButtons';
 
 // Lazy loaded components keep the page fast and improve Core Web Vitals
-const PricingSection = dynamic(() => import('./components/PricingSection'), {
+const PricingSection = dynamic(() => import('../components/PricingSection'), {
   loading: () => (
     <div className="min-h-[600px] flex items-center justify-center">
       <div className="h-12 w-12 animate-spin rounded-full border-4 border-[#ffd000] border-t-transparent" />
@@ -45,7 +45,7 @@ const PricingSection = dynamic(() => import('./components/PricingSection'), {
   ),
 });
 
-const MovieSlider = dynamic(() => import('./components/MovieSlider'), {
+const MovieSlider = dynamic(() => import('../components/MovieSlider'), {
   loading: () => (
     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-7xl mx-auto px-4">
       {[...Array(4)].map((_, i) => (
@@ -55,15 +55,15 @@ const MovieSlider = dynamic(() => import('./components/MovieSlider'), {
   ),
 });
 
-const PartnerSlider = dynamic(() => import('./components/PartnerSlider'), {
+const PartnerSlider = dynamic(() => import('../components/PartnerSlider'), {
   loading: () => <div className="h-32 bg-transparent max-w-7xl mx-auto" />,
 });
 
-const GlobalServerMap = dynamic(() => import('./components/GlobalServerMap'), {
+const GlobalServerMap = dynamic(() => import('../components/GlobalServerMap'), {
   loading: () => <div className="h-[400px] bg-[#0a2540] rounded-3xl animate-pulse max-w-7xl mx-auto" />,
 });
 
-const FAQ = dynamic(() => import('./components/FAQ'), {
+const FAQ = dynamic(() => import('../components/FAQ'), {
   loading: () => (
     <div className="min-h-[400px] flex items-center justify-center">
       <div className="h-12 w-12 animate-spin rounded-full border-4 border-[#ffd000] border-t-transparent" />
