@@ -8,7 +8,7 @@ const nextConfig: NextConfig = {
     return [
       {
         source: '/',
-        destination: '/home',
+        destination: '/krooz-tv',
         permanent: false,
       },
     ];
