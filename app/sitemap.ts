@@ -13,7 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // -------------------------------------------------------------------------
   const corePages: MetadataRoute.Sitemap = [
     {
-      url: `${baseUrl}`,
+      url: `${baseUrl}/krooz-tv`,
       lastModified: now,
       changeFrequency: 'weekly',
       priority: 1.0,
