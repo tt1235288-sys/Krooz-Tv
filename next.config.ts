@@ -8,17 +8,8 @@ const nextConfig: NextConfig = {
     return [
       {
         source: '/',
-        destination: '/krooz-tv',
+        destination: '/home',
         permanent: false,
-      },
-    ];
-  },
-
-  async rewrites() {
-    return [
-      {
-        source: '/krooz-tv',
-        destination: '/',
       },
     ];
   },
@@ -31,6 +22,7 @@ const nextConfig: NextConfig = {
     ignoreBuildErrors: false,
   },
 
+  // Allow access to remote image placeholder.
   images: {
     remotePatterns: [
       {
@@ -52,12 +44,12 @@ const nextConfig: NextConfig = {
   transpilePackages: ['motion'],
 
   webpack: (config, { dev }) => {
+    // HMR is disabled in AI Studio via DISABLE_HMR env var.
     if (dev && process.env.DISABLE_HMR === 'true') {
       config.watchOptions = {
         ignored: /.*/,
       };
     }
-
     return config;
   },
 };
