@@ -2,7 +2,6 @@
 import type { Metadata, Viewport } from 'next';
 import type { CSSProperties } from 'react';
 import { GoogleAnalytics } from '@next/third-parties/google';
-import './globals.css';
 import Header from '../components/Header';
 import FloatingWhatsApp from '../components/FloatingWhatsApp';
 import Footer from '../components/Footer';
